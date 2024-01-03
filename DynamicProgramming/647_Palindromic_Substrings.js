@@ -3,19 +3,18 @@
  * @return {number}
  */
 var countSubstrings = function (s) {
-  if (s.length === 1) {
+  let n = s.length;
+  if (n === 1) {
     return 1;
-  } else {
+  } else if (n === 2) {
     let res = 0;
-
     // single character is palindrome
-    res += s.length;
-
+    res += n;
     // check if s(word) is palindrome
     if (s === s.split("").reverse().join("")) {
       res++;
     }
-
+  } else {
     // check if other substrings are palindrome
     for (let i = 1; i < s.length - 1; i++) {
       let substring = s.substring(i - 1, i + 1);

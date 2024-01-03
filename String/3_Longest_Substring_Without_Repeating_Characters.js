@@ -12,7 +12,7 @@ var lengthOfLongestSubstring = function (s) {
       substringsArray.push(substr);
     }
   }
-  //   console.log(substringsArray);
+  // console.log(substringsArray);
 
   // 2. narrow down to an array for substrings without repeating characters
   let nonRepeatingSubstrs = [];
@@ -43,5 +43,6 @@ var lengthOfLongestSubstring = function (s) {
 
 // let answer = lengthOfLongestSubstring("abcabcbb");
 // let answer = lengthOfLongestSubstring("pwwkew");
-let answer = lengthOfLongestSubstring("bbbbb");
+// let answer = lengthOfLongestSubstring("bbbbb");
+let answer = lengthOfLongestSubstring("abcd");
 console.log(answer);
