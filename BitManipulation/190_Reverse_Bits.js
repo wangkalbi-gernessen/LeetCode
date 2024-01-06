@@ -3,9 +3,10 @@
  * @return {number} - a positive integer
  */
 var reverseBits = function (n) {
-  let binaryNum = n.split("");
-  console.log(binaryNum);
-  return parseInt(binaryNum.reverse().join(""), 2);
+  let bits = (n >>> 0).toString(2).padStart(32, "0");
+  let reverseBits = bits.split("").reverse().join("");
+  console.log(reverseBits);
+  return parseInt(reverseBits, 2);
 };
 
 let answer = reverseBits("00000010100101000001111010011100");
