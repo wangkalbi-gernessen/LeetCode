@@ -14,9 +14,25 @@ class LinkedList {
   // insert a node at the beginning of Linked List
   push(newValue) {
     let newNode = new Node(newValue);
-    newNode.next = this.head;
-    this.head = newNode;
-    return this;
+
+    if (this.head === null) {
+      this.head = newNode;
+    } else {
+      let current = this.head;
+
+      while (current.next !== null) {
+        current = current.next;
+      }
+      current.next = newNode;
+    }
+  }
+
+  display() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
   }
 }
 
@@ -26,4 +42,4 @@ myLinkedList.push(4);
 myLinkedList.push(5);
 myLinkedList.push(13);
 myLinkedList.push(6);
-console.log(myLinkedList);
+myLinkedList.display();
